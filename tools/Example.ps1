@@ -1,4 +1,4 @@
-Using Module .\Optimize-VHDWrapper.psm1
+Using Module ..\libs\optimize-vhdwrapper.psm1
 # Example usage:
 $VHDPaths = @(
     "E:\freenas_vdisks\fn_2TB_9788CC5C-rplv3.vhdx", 
