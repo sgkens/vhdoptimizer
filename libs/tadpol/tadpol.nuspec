@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<package>
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <!-- Identifier that must be unique within the hosting gallery -->
+    <id>davilion.tadpol</id>
+    <!-- Package version number that is used when resolving dependencies -->
+    <version>0.1.8</version>
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>Garvey k Snow</authors>
+    <!-- 
+        Owners are typically nuget.org identities that allow gallery
+        users to easily find other packages by the same owners.  
+    -->
+    <owners>Garvey k Snow</owners>
+    <!-- 
+        The description can be used in package manager UI. Note that the
+        nuget.org gallery uses information you add in the portal. 
+    -->
+    <description>tadpol is a powershell module that geneates custom progress bars and loaders from a theme.json config file.</description>
+    <!-- Project URL provides a link for the gallery -->
+    <projectUrl>https://gitlab.snowlab.tk/powershell/tadpol.git</projectUrl>
+    <!-- License information is displayed on the gallery -->
+    <license type="expression">MIT</license>
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>ProgressBar, Generate, progress, CustomProgress status</tags>
+    <!-- Icon is used in Visual Studio's package manager UI -->
+    <icon>icon.png</icon>
+    <!-- 
+        If true, this value prompts the user to accept the license when
+        installing the package. 
+    -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Any details about this particular release -->
+    <releaseNotes>
+    </releaseNotes>
+    <!-- Copyright information -->
+    <copyright>Copyright ©2023 davilion</copyright>
+    <!-- Dependencies are automatically installed when the package is installed -->
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <!-- Files included in the manifiest and relative path -->
+  <files>
+    <file target="icon.png" src="icon.png" />
+    <file target="LICENSE" src="LICENSE" />
+    <file target="readme.md" src="readme.md" />
+    <file target="tadpol.nuspec" src="tadpol.nuspec" />
+    <file target="tadpol.psd1" src="tadpol.psd1" />
+    <file target="tadpol.psm1" src="tadpol.psm1" />
+    <file target="libs\Get-ColorTune.psm1" src="libs\Get-ColorTune.psm1" />
+    <file target="libs\tadpol_lib.psm1" src="libs\tadpol_lib.psm1" />
+    <file target="libs\cmdlets\Get-TPThemes.psm1" src="libs\cmdlets\Get-TPThemes.psm1" />
+    <file target="libs\cmdlets\New-TPObject.psm1" src="libs\cmdlets\New-TPObject.psm1" />
+    <file target="libs\cmdlets\Write-TPProgress.psm1" src="libs\cmdlets\Write-TPProgress.psm1" />
+    <file target="libs\prelines\Clear-prelines.psm1" src="libs\prelines\Clear-prelines.psm1" />
+    <file target="themes\bars\Arrowheads.json" src="themes\bars\Arrowheads.json" />
+    <file target="themes\bars\BlocksBlueWideSpace.json" src="themes\bars\BlocksBlueWideSpace.json" />
+    <file target="themes\bars\BlocksGreenWideSpace.json" src="themes\bars\BlocksGreenWideSpace.json" />
+    <file target="themes\bars\BlocksHolo.json" src="themes\bars\BlocksHolo.json" />
+    <file target="themes\bars\BlocksMedium.json" src="themes\bars\BlocksMedium.json" />
+    <file target="themes\bars\BlocksMesh.json" src="themes\bars\BlocksMesh.json" />
+    <file target="themes\bars\BlocksOrangeWideSpace.json" src="themes\bars\BlocksOrangeWideSpace.json" />
+    <file target="themes\bars\BlocksPurpleWideSpace.json" src="themes\bars\BlocksPurpleWideSpace.json" />
+    <file target="themes\bars\BlocksRedWideSpace.json" src="themes\bars\BlocksRedWideSpace.json" />
+    <file target="themes\bars\braille.json" src="themes\bars\braille.json" />
+    <file target="themes\bars\DataSteam.json" src="themes\bars\DataSteam.json" />
+    <file target="themes\bars\default.json" src="themes\bars\default.json" />
+    <file target="themes\bars\DoubleTriangle.json" src="themes\bars\DoubleTriangle.json" />
+    <file target="themes\bars\Equalizer.json" src="themes\bars\Equalizer.json" />
+    <file target="themes\bars\EqualizerSlash.json" src="themes\bars\EqualizerSlash.json" />
+    <file target="themes\bars\ExtendedBridge.json" src="themes\bars\ExtendedBridge.json" />
+    <file target="themes\bars\Pillars.json" src="themes\bars\Pillars.json" />
+    <file target="themes\bars\PillarsSolid.json" src="themes\bars\PillarsSolid.json" />
+    <file target="themes\bars\PlayButton.json" src="themes\bars\PlayButton.json" />
+    <file target="themes\bars\squares.json" src="themes\bars\squares.json" />
+    <file target="themes\bars\squaresLight.json" src="themes\bars\squaresLight.json" />
+    <file target="themes\bars\template.json" src="themes\bars\template.json" />
+    <file target="themes\loaders\angles.json" src="themes\loaders\angles.json" />
+    <file target="themes\loaders\bits.json" src="themes\loaders\bits.json" />
+    <file target="themes\loaders\bowls.json" src="themes\loaders\bowls.json" />
+    <file target="themes\loaders\clock.json" src="themes\loaders\clock.json" />
+    <file target="themes\loaders\diamondcirlce.json" src="themes\loaders\diamondcirlce.json" />
+    <file target="themes\loaders\HoloSquare.json" src="themes\loaders\HoloSquare.json" />
+    <file target="themes\loaders\Logs.json" src="themes\loaders\Logs.json" />
+    <file target="themes\loaders\plus.json" src="themes\loaders\plus.json" />
+    <file target="themes\loaders\steps.json" src="themes\loaders\steps.json" />
+    <file target="themes\loaders\tetris.json" src="themes\loaders\tetris.json" />
+  </files>
+</package>
