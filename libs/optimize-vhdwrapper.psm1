@@ -1,5 +1,6 @@
 using module colortune\Get-ColorTune.psm1
 using module cfbytes\cfbytes-class.psm1
+using module tadpol\Tadpol.psm1
 New-Alias -Name gct -Value Get-ColorTune -Scope local
 # if(Get-module -ListAvailable -Name Hyper-V) {
 #     Import-Module Hyper-V
@@ -34,9 +35,20 @@ function New-VHDOptimizer(){
     
     $optimization = @()
     [console]::WriteLine("$(gct -text "Optimizer: " -color cyan)▓▒░ virtual hard disk optimization started ░▒▓")
-    
+    $counter = 0
+    $tadpol = New-TPObject 
     foreach ($VHDPath in $VHDPaths) {
+        $counter++
         $Name = $VHDPath | Split-Path -Leaf
+        [console]::WriteLine(
+            "$(gct -text "Optimizer: " -color cyan)$( Write-TPProgress -Count $counter `
+                                -BarLength 20 `
+                                -Total $(($counter / $VHDPaths.count) * 100) `
+                                -color blue `
+                                -theme DataSteam `
+                                -Status "Running-$Name"
+            )"
+        )
         [console]::WriteLine("$(gct -text "Optimizer: " -color cyan) └≡ Optimize ═» $(gct -text $VHDPath -color yellow) ")
         try {
             [console]::WriteLine("$(gct -text "Optimizer: " -color cyan) └≡ Calculate Size ═» $(gct -text $name -color yellow)")
@@ -46,7 +58,11 @@ function New-VHDOptimizer(){
             [console]::WriteLine("$(gct -text "Optimizer: " -color cyan) └≡ Compact ═» $(gct -text $name -color yellow)")
             
             # Compact the virtual hard disk
-            Optimize-VHD -Path $VHDPath -Mode Full
+
+            while(Optimize-VHD -Path $VHDPath -Mode Full){
+                [console]::WriteLine("$(gct -text "Optimizer: " -color cyan)$($tadpol.Loader('bits', 1, 'blue')) Compacting...")
+                [Console]::SetCursorPosition(0, ([Console]::GetCursorPosition().Item2 - 1 ) );
+            }
 
             $meta_after = Get-vhdmetadata -VHDPath $VHDPath
             $optimization += @{
