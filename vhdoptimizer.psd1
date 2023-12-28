@@ -9,7 +9,7 @@
 @{
 
 # Script module or binary module file associated with this manifest.
-RootModule = '$PSScriptroot/vhdoptimizer.psm1'
+RootModule = 'vhdoptimizer.psm1'
 
 # Version number of this module.
 ModuleVersion = '0.1.0.0'
@@ -33,7 +33,7 @@ Copyright = '2023 davilion. All rights reserved.'
 Description = 'simple module, exposes a function to optimize vhd files.'
 
 # Minimum version of the PowerShell engine required by this module
-PowerShellVersion = '7.4.0'
+PowerShellVersion = '5.1'
 
 # Name of the PowerShell host required by this module
 # PowerShellHostName = ''
@@ -69,16 +69,16 @@ PowerShellVersion = '7.4.0'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = 'New-VHDOptimizer'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-CmdletsToExport = '*'
+CmdletsToExport = ''
 
 # Variables to export from this module
-VariablesToExport = '*'
+VariablesToExport = ''
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = '*'
+AliasesToExport = ''
 
 # DSC resources to export from this module
 # DscResourcesToExport = @()
@@ -101,16 +101,16 @@ PrivateData = @{
         LicenseUri = 'https://choosealicense.com/licenses/mit'
 
         # A URL to the main website for this project.
-        ProjectUri = 'https://gitlab.lab.davilion.online/powershell/vhdoptimizer.git'
+        ProjectUri = 'https://gitlab.com/sgkens/vhdoptimizer.git'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://gitlab.lab.davilion.online/powershell/vhdoptimizer/-/blob/main/logo.svg'
+        IconUri  = 'https://gitlab.com/sgkens/vhdoptimizer/-/blob/main/logo.svg'
 
         # ReleaseNotes of this module
-        ReleaseNotes = 'https://gitlab.lab.davilion.online/powershell/vhdoptimizer/-/blob/main/Releases.md'
+        ReleaseNotes = 'https://gitlab.com/sgkens/vhdoptimizer/-/blob/main/Releases.md'
 
         # Prerelease string of this module
-        Prerelease = 'alpha1'
+        # Prerelease = 'alpha1'
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
         # RequireLicenseAcceptance = $false
